@@ -13,7 +13,7 @@ def list_all_ads():
 
     query_db_all_ads = Ad.query.all()
     dict_db_all_ads = ads_share_schema.dump(query_db_all_ads)
-    print(dict_db_all_ads)
+
     return (dict_db_all_ads), 200
 
 @ads.route("/create", methods=['POST'])

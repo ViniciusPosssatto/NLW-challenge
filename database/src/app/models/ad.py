@@ -3,7 +3,7 @@ from src.app import database as db, ma
 from src.app.models.game import Game
 
 
-class Ad(db.model):
+class Ad(db.Model):
     __tablename__ = 'ads'
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     name = db.Column(db.String(100), nullable=False)

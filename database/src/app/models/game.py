@@ -1,7 +1,7 @@
 from src.app import database as db, ma
 
 
-class Game(db.model):
+class Game(db.Model):
     __tablename__ = 'games'
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     title = db.Column(db.String(100), nullable=False)

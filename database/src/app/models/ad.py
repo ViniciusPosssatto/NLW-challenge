@@ -1,6 +1,6 @@
 from datetime import date
 from src.app import database as db, ma
-from src.app.models.game import Game
+from src.app.models.game import Game, game_share_schema
 
 
 class Ad(db.Model):
@@ -49,8 +49,9 @@ class Ad(db.Model):
 
 
 class AdSchema(ma.Schema):
+    game = ma.Nested(game_share_schema)
     class Meta:
-        fields = ('id', 'name', 'years_playing', 'discord', 'week_days', 'hour_start', 'hour_end', 'use_voice_channel', 'create_at', 'game_id')
+        fields = ('id', 'name', 'years_playing', 'discord', 'week_days', 'hour_start', 'hour_end', 'use_voice_channel', 'create_at', 'game_id', 'game')
 
 
 ad_share_schema = AdSchema()

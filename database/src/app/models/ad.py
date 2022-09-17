@@ -11,7 +11,7 @@ class Ad(db.Model):
     name = db.Column(db.String(100), nullable=False)
     hours_playing = db.Column(db.Integer, nullable=False)
     discord = db.Column(db.String(50), nullable=False)
-    password = db.Column(db.String(30), nullable=False)
+    password = db.Column(db.String(80), nullable=False)
     week_days = db.Column(db.String(50), nullable=False)
     hour_start = db.Column(db.Integer, nullable=False)
     hour_end = db.Column(db.Integer, nullable=False)

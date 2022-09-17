@@ -7,8 +7,8 @@ class Game(db.Model):
     title = db.Column(db.String(100), nullable=False)
     banner_url = db.Column(db.String(200), nullable=False)
 
-    def __init__(self, title, banner):
-        self.banner_url = banner
+    def __init__(self, title, banner_url):
+        self.banner_url = banner_url
         self.title = title
 
     @classmethod

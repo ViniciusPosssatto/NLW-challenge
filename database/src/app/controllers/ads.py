@@ -35,7 +35,7 @@ def create_ads():
 
 
 @ads.route("/login", methods=['POST'])
-def create_ads():
+def login_ads():
 
     body = request.get_json()
 

@@ -1,5 +1,7 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, json
+from flask.wrappers import Response
 
+from src.app.services.ad_service import make_login
 from src.app.models.ad import Ad, ads_share_schema
 from src.app.utils import exist_user_discord
 from src.app.services.ad_service import create_ad
@@ -30,3 +32,16 @@ def create_ads():
         return jsonify(response), 400
 
     return jsonify(response), 201
+
+
+@ads.route("/login", methods=['POST'])
+def create_ads():
+
+    body = request.get_json()
+
+    response = make_login(body['discord'], body['password'])
+
+    if "error" in response:
+        return (response), 401
+
+    return (response), 200

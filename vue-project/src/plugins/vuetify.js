@@ -10,5 +10,8 @@ import { createVuetify } from 'vuetify'
 export default createVuetify({
   components,
   directives,
+  theme: {
+    defaultTheme: 'dark'
+  },
  // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 });

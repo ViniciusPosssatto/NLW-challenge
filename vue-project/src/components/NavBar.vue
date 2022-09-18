@@ -1,41 +1,21 @@
 <template>
-	<v-card flat>
-		<v-toolbar
-			color="deep-purple"
-			dark
-			extended
-			flat
+	<v-card
+		border
+		class="mb-2"
+		density="compact"
+		prepend-avatar="https://randomuser.me/api/portraits/women/10.jpg"
+		subtitle="Dias que joga"
+		title="Nome da pessoa"
+		variant="text"
 		>
-		</v-toolbar>
+		<v-card-text>
+			Colocar alguma informação aqui
+		</v-card-text>
 
-		<v-card
-			class="mx-auto"
-			max-width="700"
-			style="margin-top: -64px;"
-		>
-			<v-toolbar flat>
-				<v-toolbar-title class="grey--text">
-					Title
-				</v-toolbar-title>
+		<template v-slot:actions>
+			<v-btn color="primary" variant="text">Estou online</v-btn>
 
-				<v-spacer></v-spacer>
-
-				<v-btn icon>
-					<v-icon>mdi-magnify</v-icon>
-				</v-btn>
-
-				<v-btn icon>
-					<v-icon>mdi-apps</v-icon>
-				</v-btn>
-
-				<v-btn icon>
-					<v-icon>mdi-dots-vertical</v-icon>
-				</v-btn>
-			</v-toolbar>
-
-			<v-divider></v-divider>
-
-			<v-card-text style="height: 200px;"></v-card-text>
-		</v-card>
+			<v-btn color="primary" variant="text">Alterar game</v-btn>
+		</template>
 	</v-card>
 </template>

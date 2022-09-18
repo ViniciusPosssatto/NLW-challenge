@@ -1,12 +1,4 @@
 <template>
-  <!-- <v-window v-model="window" show-arrows>
-    <v-window-item v-for="n in length" :key="n">
-      <v-card height="200px" class="d-flex justify-center align-center">
-        <span class="text-h2">{{ n.game }}</span>
-        <img :src="n.url" alt="imagem do jogo" />
-      </v-card>
-    </v-window-item>
-  </v-window> -->
   <v-carousel 
     hide-delimiters
     :continuous="false"

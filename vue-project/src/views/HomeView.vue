@@ -1,14 +1,6 @@
 <template>
-  <v-carousel 
-    hide-delimiters
-    :continuous="false"
-    height="400"
-  >
-    <v-carousel-item
-      v-for="(item,i) in length"
-      :key="i"
-      :src="item.url"
-    >
+  <v-carousel hide-delimiters :continuous="false" height="400">
+    <v-carousel-item v-for="(item, i) in length" :key="i" :src="item.url">
     <h1>
       {{ item.game }}
     </h1>
